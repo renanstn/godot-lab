@@ -1,4 +1,6 @@
-# Godot
+# Godot Mechanics
+
+*Este repositório trata-se de um projeto de exemplo onde eu utilizo todas as mecânicas que já desenvolvi na GodotEngine. Para fins de consultas futuras.*
 
 Mecânicas implementadas até agora:
 - Movimentação básica em plataforma
@@ -14,4 +16,4 @@ Mecânicas implementadas até agora:
 
 ![print](https://github.com/Doc-McCoy/godot_mechanics/blob/master/print.PNG)
 
-*Assets utilizados: [Kenney](https://www.kenney.nl/assets)*
+*Assets utilizados: [Kenney](https://www.kenney.nl/assets/simplified-platformer-pack)*
