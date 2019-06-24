@@ -11,6 +11,7 @@ var can_control : bool = true
 onready var sprite : Sprite = $Sprite
 onready var animator : AnimationPlayer = $AnimationPlayer
 
+# Signal utilizado pelo script Camera2D para ajuste da câmera
 signal player_flipped(direction)
 
 
@@ -43,7 +44,9 @@ func animate()->void:
 		animator.play("Jumping")
 	if motion.x > 0 and sprite.flip_h:
 		sprite.flip_h = false
+		# Emitir o signal para o script da câmera2D
 		emit_signal("player_flipped", "right")
 	if motion.x < 0 and !sprite.flip_h:
 		sprite.flip_h = true
+		# Emitir o signal para o script da câmera2D
 		emit_signal("player_flipped", "left")
