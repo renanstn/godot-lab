@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Tilesets/Tilemap.tres" type="TileSet" id=1]
+[ext_resource path="res://Scenes/newPlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/GUI2.tscn" type="PackedScene" id=3]
+
+[node name="CenaTeste" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 0, 2, 0, 15, 2, 0, 65536, 2, 0, 65551, 2, 0, 131072, 2, 0, 131087, 2, 0, 196608, 2, 0, 196623, 2, 0, 262144, 2, 0, 262155, 1, 0, 262156, 1, 0, 262157, 1, 0, 262159, 2, 0, 327680, 2, 0, 327695, 2, 0, 393216, 2, 0, 393224, 1, 0, 393225, 1, 0, 393226, 1, 0, 393231, 2, 0, 458752, 2, 0, 458754, 1, 0, 458755, 1, 0, 458767, 2, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 352, 448 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GUI" parent="CanvasLayer" instance=ExtResource( 3 )]
