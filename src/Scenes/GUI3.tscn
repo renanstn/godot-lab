@@ -7,11 +7,12 @@ margin_right = 82.0
 margin_bottom = 40.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 186.0
+margin_right = 181.0
 margin_bottom = 92.0
 
 [node name="Move" type="HBoxContainer" parent="VBoxContainer"]
-margin_right = 186.0
+editor/display_folded = true
+margin_right = 181.0
 margin_bottom = 28.0
 
 [node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Move"]
@@ -53,8 +54,9 @@ margin_bottom = 21.0
 text = "D"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+editor/display_folded = true
 margin_top = 32.0
-margin_right = 186.0
+margin_right = 181.0
 margin_bottom = 60.0
 
 [node name="PanelContainer4" type="PanelContainer" parent="VBoxContainer/HBoxContainer"]
@@ -83,31 +85,32 @@ margin_bottom = 21.0
 text = "Jump"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+editor/display_folded = true
 margin_top = 64.0
-margin_right = 186.0
+margin_right = 181.0
 margin_bottom = 92.0
 
 [node name="PanelContainer5" type="PanelContainer" parent="VBoxContainer/HBoxContainer2"]
 editor/display_folded = true
-margin_right = 85.0
+margin_right = 36.0
 margin_bottom = 28.0
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/PanelContainer5"]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 78.0
+margin_right = 29.0
 margin_bottom = 21.0
-text = "Hold Space"
+text = "Ctrl"
 
 [node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer2"]
 editor/display_folded = true
-margin_left = 89.0
-margin_right = 181.0
+margin_left = 40.0
+margin_right = 82.0
 margin_bottom = 28.0
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/PanelContainer"]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 85.0
+margin_right = 35.0
 margin_bottom = 21.0
-text = "Jump Higher"
+text = "Stop"

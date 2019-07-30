@@ -3,11 +3,11 @@
 [ext_resource path="res://Scripts/BallPlayer.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Ball/0.png" type="Texture" id=2]
 
-[sub_resource type="PhysicsMaterial" id=2]
+[sub_resource type="PhysicsMaterial" id=3]
 friction = 0.7
 bounce = 0.3
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=2]
 radius = 34.765
 
 [node name="BallPlayer" type="Node2D"]
@@ -16,7 +16,7 @@ __meta__ = {
 }
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
-physics_material_override = SubResource( 2 )
+physics_material_override = SubResource( 3 )
 gravity_scale = 10.0
 script = ExtResource( 1 )
 
@@ -25,9 +25,11 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="RigidBody2D"]
 current = true
 
-[node name="GroundCheck" type="Position2D" parent="."]
+[node name="RayCast2D" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, 40 )

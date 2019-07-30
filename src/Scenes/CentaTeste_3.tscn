@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://TileSets/Default.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/ParallaxBackground.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/BallPlayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/GUI3.tscn" type="PackedScene" id=4]
 
 [node name="CentaTeste_3" type="Node2D"]
 
@@ -15,3 +16,9 @@ tile_data = PoolIntArray( 196608, 1, 0, 196686, 1, 0, 262144, 1, 0, 262222, 1, 0
 
 [node name="BallPlayer" parent="." instance=ExtResource( 3 )]
 position = Vector2( 356.899, 306.428 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GUI" parent="CanvasLayer" instance=ExtResource( 4 )]
+margin_right = 162.0
+margin_bottom = 112.0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Tilesets/Tilemap.tres" type="TileSet" id=1]
+[ext_resource path="res://TileSets/Tilemap.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/newPlayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/GUI2.tscn" type="PackedScene" id=3]
 
