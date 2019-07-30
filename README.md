@@ -13,6 +13,7 @@ Mecânicas implementadas até agora:
 - Efeito de **voltar no tempo**
 - Mecânica de pulo que faz com que o player vá mais alto se **segurar o botão**, ou mais baixo se **soltar o botão**
 - Nova forma de programar pulo/gravidade, que utiliza fórmulas para tornar mais fácil o controle de movimento e de pulo. O valor da gravidade e do mov_speed passam a ser dinâmicos de acordo com a configuração de pulo/movimentação escolhida.
+- Mecânica onde você controla uma bola, e aplica aceleração ou desaceleração a ela. A bola possui também uma função de pulo, com o checkGround() feito utilizando raycast.
 - Mais em breve...
 
 
