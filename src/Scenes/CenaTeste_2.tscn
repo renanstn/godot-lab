@@ -4,7 +4,7 @@
 [ext_resource path="res://Scenes/newPlayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/GUI2.tscn" type="PackedScene" id=3]
 
-[node name="CenaTeste" type="Node2D"]
+[node name="CenaTeste_2" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )

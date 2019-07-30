@@ -1,14 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://TileSets/Default.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Backgrounds/colored_talltrees.png" type="Texture" id=3]
-[ext_resource path="res://Backgrounds/clouds1.png" type="Texture" id=4]
-[ext_resource path="res://Scenes/SlowMotion.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Rewinder.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/ParallaxBackground.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/SlowMotion.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Rewinder.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=6]
 
-[node name="Node2D" type="Node2D"]
+[node name="CenaTeste_1" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -18,36 +17,15 @@ tile_data = PoolIntArray( 196617, 2, 0, 196618, 2, 0, 327685, 2, 0, 327686, 2, 0
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 73.1008, 413.009 )
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-editor/display_folded = true
+[node name="ParallaxBackground" parent="." instance=ExtResource( 3 )]
 
-[node name="Background" type="ParallaxLayer" parent="ParallaxBackground"]
-editor/display_folded = true
-motion_scale = Vector2( 0.25, 1 )
-motion_mirroring = Vector2( 1024, 0 )
+[node name="SlowMotion" parent="." instance=ExtResource( 4 )]
 
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/Background"]
-position = Vector2( 0, -384 )
-texture = ExtResource( 3 )
-centered = false
-
-[node name="Clouds" type="ParallaxLayer" parent="ParallaxBackground"]
-editor/display_folded = true
-motion_scale = Vector2( 0.5, 1 )
-motion_mirroring = Vector2( 999, 0 )
-
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/Clouds"]
-position = Vector2( 0, 320 )
-texture = ExtResource( 4 )
-centered = false
-
-[node name="SlowMotion" parent="." instance=ExtResource( 5 )]
-
-[node name="Rewinder" parent="." instance=ExtResource( 6 )]
-path_player = NodePath("../Player")
+[node name="Rewinder" parent="." instance=ExtResource( 5 )]
+path_player = NodePath("../../CenaTeste_1/Player")
 
 [node name="GUI" type="CanvasLayer" parent="."]
 
-[node name="GUI" parent="GUI" instance=ExtResource( 7 )]
+[node name="GUI" parent="GUI" instance=ExtResource( 6 )]
 margin_right = 217.0
 margin_bottom = 112.0
