@@ -18,4 +18,4 @@ flip_h = true
 position = Vector2( 157.69, -75.2523 )
 rotation = -1.5708
 enabled = true
-cast_to = Vector2( 0, 500 )
+cast_to = Vector2( 0, 100 )
