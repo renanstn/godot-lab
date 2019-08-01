@@ -1,21 +1,32 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/RaycastRevolver.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/revolver.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/pistol.png" type="Texture" id=2]
+[ext_resource path="res://Sounds/9_mm_gunshot-mike-koenig-123.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/Stapler-SoundBible.com-374581609.wav" type="AudioStream" id=4]
 
 [node name="RaycastRevolver" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="Base" type="Position2D" parent="."]
 
-[node name="Sprite" type="Sprite" parent="Base"]
-position = Vector2( 72.6271, -39.1069 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 2 )
-flip_h = true
-
 [node name="RayCast2D" type="RayCast2D" parent="Base"]
-position = Vector2( 157.69, -75.2523 )
+position = Vector2( 77.7315, -38.9961 )
 rotation = -1.5708
 enabled = true
 cast_to = Vector2( 0, 100 )
+
+[node name="Sprite" type="Sprite" parent="Base"]
+position = Vector2( 23.8832, -0.663422 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="BangSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="RecoilTimer" type="Timer" parent="."]
+[connection signal="timeout" from="RecoilTimer" to="." method="_on_RecoilTimer_timeout"]

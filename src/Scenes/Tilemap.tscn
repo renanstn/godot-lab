@@ -15,7 +15,9 @@ extents = Vector2( 32, 32 )
 
 [node name="Tilemap" type="Node2D"]
 
-[node name="Ground" type="Sprite" parent="."]
+[node name="Ground" type="Sprite" parent="." groups=[
+"floor",
+]]
 editor/display_folded = true
 position = Vector2( -96, -96 )
 texture = ExtResource( 1 )
@@ -24,11 +26,14 @@ __meta__ = {
 }
 
 [node name="GroundBody" type="StaticBody2D" parent="Ground"]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/GroundBody"]
 shape = SubResource( 1 )
 
-[node name="Platform" type="Sprite" parent="."]
+[node name="Platform" type="Sprite" parent="." groups=[
+"floor",
+]]
 editor/display_folded = true
 position = Vector2( 32, -112 )
 texture = ExtResource( 2 )
@@ -42,7 +47,9 @@ __meta__ = {
 shape = SubResource( 2 )
 one_way_collision = true
 
-[node name="Wall" type="Sprite" parent="."]
+[node name="Wall" type="Sprite" parent="." groups=[
+"wall",
+]]
 editor/display_folded = true
 position = Vector2( 160, -96 )
 texture = ExtResource( 3 )

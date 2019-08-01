@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0.png-fe3b89e35d6c38cd01b5ff104e12ecf2.stex"
+path="res://.import/pistol.png-bc70c7efa5d7fd380f9e333006ce5211.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ball/0.png"
-dest_files=[ "res://.import/0.png-fe3b89e35d6c38cd01b5ff104e12ecf2.stex" ]
+source_file="res://Sprites/pistol.png"
+dest_files=[ "res://.import/pistol.png-bc70c7efa5d7fd380f9e333006ce5211.stex" ]
 
 [params]
 

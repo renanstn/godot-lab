@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://TileSets/Tilemap.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/newPlayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/RaycastRevolver.tscn" type="PackedScene" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32.0862, 32.0522 )
 
 [node name="CenaTeste4" type="Node2D"]
 
@@ -15,3 +19,18 @@ tile_data = PoolIntArray( 65536, 2, 0, 65551, 2, 0, 131072, 2, 0, 131087, 2, 0, 
 position = Vector2( 155.41, 479.18 )
 
 [node name="RaycastRevolver" parent="Player" instance=ExtResource( 3 )]
+
+[node name="Enemy" type="StaticBody2D" parent="." groups=[
+"enemy",
+]]
+editor/display_folded = true
+position = Vector2( 735.033, 414.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Enemy"]
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+shape = SubResource( 1 )
