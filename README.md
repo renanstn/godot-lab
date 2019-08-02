@@ -24,17 +24,12 @@ Mecânicas implementadas até agora:
 - Adicionado um inimigo utilizando o sistema de group para identificá-lo como "enemy", para que seja possível saber onde a bala acertou.
 - Mais em breve...
 
-Cena 1
+
 ![Cena 1](https://github.com/Doc-McCoy/godot_mechanics/blob/master/prints/print1.PNG)
-
-Cena 2
 ![Cena 2](https://github.com/Doc-McCoy/godot_mechanics/blob/master/prints/print2.png)
-
-Cena 3
 ![Cena 3](https://github.com/Doc-McCoy/godot_mechanics/blob/master/prints/print3.png)
-
-Cena 4
 ![Cena 4](https://github.com/Doc-McCoy/godot_mechanics/blob/master/prints/print4.png)
+
 
 *Assets utilizados:
 
