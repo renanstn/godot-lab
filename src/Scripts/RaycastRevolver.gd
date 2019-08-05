@@ -37,6 +37,7 @@ func shot():
 		var ponto_de_colisao = raycast.get_collision_point()
 		var colidiu_com = raycast.get_collider()
 		var collider_groups = colidiu_com.get_groups()
+		create_trail(ponto_de_colisao)
 		if "enemy" in collider_groups:
 			print("hit enemy!")
 		# Criar explosao
@@ -49,3 +50,12 @@ func shoot_fail():
 
 func _on_RecoilTimer_timeout():
 	can_fire = true
+
+func create_trail(destino):
+	var trail = Line2D.new()
+	trail.add_point($Base/RayCast2D.get_global_position())
+	trail.add_point(destino)
+	trail.set_width(3)
+	trail.set_default_color(Color.white)
+	get_node("/root").add_child(trail)
+	
