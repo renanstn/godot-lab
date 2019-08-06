@@ -19,9 +19,10 @@ Mecânicas implementadas até agora:
 - Mecânica onde você controla uma bola, e aplica aceleração ou desaceleração a ela.
 - Função de pulo baseada em raycast para verificar se a bola está no chão.
 > Cena 4
-- Mecânica de arma sem projétil, onde um raycast é utilizado para verificar o acerto, e já instancia a explosão no local de colisão.
-- Tempo de recoil da arma e animação de hit onde o tiro acerta.
+- Mecânica de arma sem projétil, onde um raycast é utilizado para verificar o acerto, e já instancia a animação de hit no local de colisão.
+- Tempo de cooldown da arma e animação de hit onde o tiro acerta.
 - Adicionado um inimigo utilizando o sistema de group para identificá-lo como "enemy", para que seja possível saber onde a bala acertou.
+- Adicionado um efeito de "rastro", uma linha que indica a direção que a bala percorreu. O rastro some rapidamente. Para isso foi utilizado uma função de **setup** na cena do rastro que recebe como argumento a posição inicial e final do mesmo.
 - Mais em breve...
 
 
