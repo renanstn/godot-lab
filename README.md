@@ -1,6 +1,6 @@
 # Godot Mechanics
 
-*Este repositório trata-se de um projeto de exemplo onde eu utilizo todas as mecânicas que já desenvolvi na GodotEngine. Para fins de consultas futuras.*
+*Este repositório trata-se de um projeto de exemplo onde eu utilizo todas as mecânicas que já desenvolvi na GodotEngine. Para fins de consultas futuras ou auxiliar qualquer pessoinha se aventurando nas águas desta engine maravilhosa.*
 
 Mecânicas implementadas até agora:
 ## Cena 1
