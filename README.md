@@ -13,7 +13,7 @@ Mecânicas implementadas até agora:
 - Efeito de **Slow Motion**
 - Efeito de **voltar no tempo**
 ## Cena 2
-- Mecânica de pulo que faz com que o player vá mais alto se **segurar o botão**, ou mais baixo se **soltar o botão**
+- Mecânica de pulo que faz com que o player vá mais alto se **segurar o botão**, ou mais baixo se **soltar rapidamente o botão**
 - Nova forma de programar pulo/gravidade, que utiliza fórmulas para tornar mais fácil o controle de movimento e de pulo. O valor da gravidade e do mov_speed passam a ser dinâmicos de acordo com a configuração de pulo/movimentação escolhida.
 ## Cena 3
 - Mecânica onde você controla uma bola, e aplica aceleração ou desaceleração a ela.
