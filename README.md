@@ -23,6 +23,19 @@ Mecânicas implementadas até agora:
 - Tempo de cooldown da arma e animação de hit onde o tiro acerta.
 - Adicionado um inimigo utilizando o sistema de group para identificá-lo como "enemy", para que seja possível saber onde a bala acertou.
 - Adicionado um efeito de "rastro", uma linha que indica a direção que a bala percorreu. O rastro some rapidamente. Para isso foi utilizado uma função de **setup** na cena do rastro que recebe como argumento a posição inicial e final do mesmo.
+> Cena 5 - **Steering Behaviours**
+- Steering Behaviours são scripts que visam ajudar NPCs autônomos a se movimentarem de maneira mais realista. Os seguintes movimentos podem ser implementados com esses scripts:
+  - Perseguir
+  - Fugir
+  - Vagar aleatoriamente
+  - Perseguir e Evadir com maior "inteligência", considerando o movimento do player para fazer antecipações
+  - Evitar colisão
+  - Seguir caminho pré-definido
+  - Seguir líder
+  - Fazer fila
+  - Flocking (comportamento de bando)
+- Steering Behaviour Seek e Flee implementados. O NPC persegue ou foge do ponteiro do mouse.
+- Comentados no código algumas diferenças entre as versões 2 e 3 da Godot.
 - Mais em breve...
 
 
