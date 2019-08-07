@@ -3,7 +3,7 @@
 *Este repositório trata-se de um projeto de exemplo onde eu utilizo todas as mecânicas que já desenvolvi na GodotEngine. Para fins de consultas futuras.*
 
 Mecânicas implementadas até agora:
-> Cena 1
+## Cena 1
 - Movimentação básica em plataforma
 - Animação básica do personagem
 - Câmera seguindo player + efeito de olhar um pouco à frente do mesmo
@@ -12,18 +12,18 @@ Mecânicas implementadas até agora:
 - Fundo parallax em camadas
 - Efeito de **Slow Motion**
 - Efeito de **voltar no tempo**
-> Cena 2
+## Cena 2
 - Mecânica de pulo que faz com que o player vá mais alto se **segurar o botão**, ou mais baixo se **soltar o botão**
 - Nova forma de programar pulo/gravidade, que utiliza fórmulas para tornar mais fácil o controle de movimento e de pulo. O valor da gravidade e do mov_speed passam a ser dinâmicos de acordo com a configuração de pulo/movimentação escolhida.
-> Cena 3
+## Cena 3
 - Mecânica onde você controla uma bola, e aplica aceleração ou desaceleração a ela.
 - Função de pulo baseada em raycast para verificar se a bola está no chão.
-> Cena 4
+## Cena 4
 - Mecânica de arma sem projétil, onde um raycast é utilizado para verificar o acerto, e já instancia a animação de hit no local de colisão.
 - Tempo de cooldown da arma e animação de hit onde o tiro acerta.
 - Adicionado um inimigo utilizando o sistema de group para identificá-lo como "enemy", para que seja possível saber onde a bala acertou.
 - Adicionado um efeito de "rastro", uma linha que indica a direção que a bala percorreu. O rastro some rapidamente. Para isso foi utilizado uma função de **setup** na cena do rastro que recebe como argumento a posição inicial e final do mesmo.
-> Cena 5 - **Steering Behaviours**
+## Cena 5 - **Steering Behaviours**
 - Steering Behaviours são scripts que visam ajudar NPCs autônomos a se movimentarem de maneira mais realista. Os seguintes movimentos podem ser implementados com esses scripts:
   - Perseguir
   - Fugir
