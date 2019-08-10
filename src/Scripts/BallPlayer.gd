@@ -6,7 +6,6 @@ var brake : bool = false
 var jump : bool = false
 var accelerate : bool = false
 var on_ground : bool = false
-var space_state : Physics2DDirectSpaceState
 onready var raycast : RayCast2D = get_parent().get_node("RayCast2D")
 
 func _physics_process(delta):
@@ -29,12 +28,6 @@ func _physics_process(delta):
 	if jump:
 		apply_impulse(Vector2(0, 0), Vector2(0, -500))
 		jump = false
-
-#	print("Acelerando: " + str(accelerate))
-#	print("Brake: " + str(brake))
-#	print("Jump: " + str(jump))
-#	print("Acceleration: " + str(rotate))
-#	print("On ground: " + str(raycast.is_colliding()))
 
 func getInputs():
 	# Accelerate

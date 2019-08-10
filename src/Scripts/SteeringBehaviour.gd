@@ -12,8 +12,8 @@ funciona mais passar um Vector2 diretamente pra ele.
 - Max force é a suavidade com que ele faz as curvas
 """
 
-export var max_speed : float # default: 300
-export var max_force : float # default: 0.02
+export var max_speed : float = 300.0
+export var max_force : float = 0.02
 export (int, "Seek", "Flee") var mode = 0
 var velocity : Vector2
 var target : Vector2

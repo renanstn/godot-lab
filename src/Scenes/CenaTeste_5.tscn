@@ -1,10 +1,19 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scenes/SteeringBehaviour.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Obstaculo.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/CollisionAvoidance.tscn" type="PackedScene" id=2]
 
 [node name="CenaTeste_5" type="Node2D"]
 
-[node name="SteeringBehaviour" parent="." instance=ExtResource( 1 )]
-position = Vector2( 518.636, 297.117 )
-max_speed = 300.0
-max_force = 0.02
+[node name="Obstaculo" parent="." instance=ExtResource( 1 )]
+position = Vector2( 285, 303 )
+
+[node name="Obstaculo2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 432, 134 )
+
+[node name="Obstaculo3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 696, 437 )
+
+[node name="CollisionAvoidance" parent="." instance=ExtResource( 2 )]
+position = Vector2( 505.03, 314.915 )
+max_avoid_force = 5.0
