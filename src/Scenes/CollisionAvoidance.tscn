@@ -19,6 +19,7 @@ shape = SubResource( 1 )
 texture = ExtResource( 2 )
 
 [node name="Ahead" type="Position2D" parent="."]
+editor/display_folded = true
 
 [node name="Sprite" type="Sprite" parent="Ahead"]
 modulate = Color( 0.00784314, 0, 1, 1 )
@@ -26,6 +27,7 @@ scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 2 )
 
 [node name="Ahead2" type="Position2D" parent="."]
+editor/display_folded = true
 
 [node name="Sprite" type="Sprite" parent="Ahead2"]
 modulate = Color( 1, 0.0470588, 0, 1 )
