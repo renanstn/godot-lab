@@ -1,34 +1,25 @@
 extends KinematicBody2D
 
-export var max_speed : float = 300.0
-export var max_force : float = 0.02
+export var target_path : NodePath
+onready var target = get_node(target_path)
+export var max_vel : float = 200.0
+export var vax_force : float = 1000.0
 var velocity : Vector2
-var target : Vector2
+var force : Vector2
+var steering_force : Vector2
 
+export (String, "steering", "steering and arriving", "fleeing", "wander", "pursuit") var mode = "steering"
+# -------------------------------------------------------------------
 func _physics_process(delta):
-	target = get_global_mouse_position()
-	velocity = steer(target)
-	move_and_slide(velocity)
-	aligment()
-	
-func steer(target : Vector2) -> Vector2:
-	var vector = (target - get_position()).normalized() * max_speed
-	var desired_velocity = Vector2(vector.x, vector.y)
-	var steer = desired_velocity - velocity
-	var target_velocity = velocity + (steer * max_force)
-	return target_velocity
+	if mode == "steering":
+		force = steering(global_position, target.global_position, velocity)
+		
+	velocity = move_and_slide(velocity + force)
 
-func aligment() -> Vector2:
-	var velocity_to_return : Vector2 = Vector2()
-	var vizinhos : Array = []
-	vizinhos = $Vizinhos.get_overlapping_bodies()
-	for vizinho in vizinhos:
-		if not vizinho.is_in_group('boid'):
-			var distancia : float = get_global_position().distance_to(vizinho.get_global_position())
-			if distancia < 100:
-				velocity_to_return.x += vizinho.velocity.x
-				velocity_to_return.y += vizinho.velocity.y
-				velocity_to_return.x /= vizinhos.size()
-				velocity_to_return.y /= vizinhos.size()
-
-	return velocity_to_return.normalized()
+# -------------------------------------------------------------------
+func steering(cur_pos, target_pos, cur_vel) -> Vector2:
+	var distance_to_target : Vector2 = target_pos - cur_pos
+	var desired_vel : Vector2 = distance_to_target.normalized() * max_vel
+	steering_force = (desired_vel - cur_vel)
+#	steering_force = truncate( steering_force, max_force )
+	return steering_force

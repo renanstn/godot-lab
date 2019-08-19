@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/PlayerFish.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Predator 1.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 27.1093
+
+[node name="PlayerFish" type="KinematicBody2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )

@@ -1,29 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Boid.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Guppy Small Normal.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 31.9831, 32.0337 )
+[sub_resource type="CircleShape2D" id=1]
+radius = 14.5315
 
-[sub_resource type="CircleShape2D" id=2]
-radius = 112.031
-
-[node name="Boid" type="KinematicBody2D" groups=[
-"boid",
-]]
+[node name="Boid" type="KinematicBody2D"]
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
-
-[node name="Vizinhos" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Vizinhos"]
-shape = SubResource( 2 )
