@@ -11,4 +11,3 @@ position = Vector2( 907.777, 272.723 )
 [node name="Boid" parent="." instance=ExtResource( 2 )]
 position = Vector2( 520.121, 299.995 )
 target_path = NodePath("../PlayerFish")
-mode = "pursuit"
