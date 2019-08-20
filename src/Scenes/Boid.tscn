@@ -4,10 +4,14 @@
 [ext_resource path="res://Sprites/Guppy Small Normal.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 14.5315
+radius = 13.5708
 
 [node name="Boid" type="KinematicBody2D"]
+editor/display_folded = true
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
