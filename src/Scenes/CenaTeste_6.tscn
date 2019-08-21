@@ -9,5 +9,21 @@
 position = Vector2( 907.777, 272.723 )
 
 [node name="Boid" parent="." instance=ExtResource( 2 )]
-position = Vector2( 520.121, 299.995 )
+position = Vector2( 557.133, 284.411 )
 target_path = NodePath("../PlayerFish")
+flocking = "steering"
+
+[node name="Boid2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 467.525, 249.347 )
+target_path = NodePath("../PlayerFish")
+flocking = "steering"
+
+[node name="Boid3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 374.02, 329.215 )
+target_path = NodePath("../PlayerFish")
+flocking = "steering"
+
+[node name="Boid4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 481.161, 356.488 )
+target_path = NodePath("../PlayerFish")
+flocking = "steering"
