@@ -33,4 +33,5 @@ stream = ExtResource( 4 )
 stream = ExtResource( 5 )
 
 [node name="RecoilTimer" type="Timer" parent="."]
+one_shot = true
 [connection signal="timeout" from="RecoilTimer" to="." method="_on_RecoilTimer_timeout"]
