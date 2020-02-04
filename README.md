@@ -37,6 +37,8 @@ Mecânicas implementadas até agora:
 - Steering Behaviour Seek e Flee implementados. O NPC persegue ou foge do ponteiro do mouse.
 - Comentados no código algumas diferenças entre as versões 2 e 3 da Godot.
 - Mais em breve...
+## Cena 7
+- Mecânica de pulo em "2 etapas", inspirado no jogo *The Messenger*. Quando o player se encontra no **ponto mais alto** do pulo, a animação muda. Basicamente temos uma animação pra ele subindo/descendo, e uma para quando ele está no apogeu do salto.
 
 
 ![Cena 1](https://github.com/Doc-McCoy/godot_mechanics/blob/master/prints/print1.PNG)
