@@ -41,6 +41,8 @@ Mecânicas implementadas até agora:
 - Mecânica de pulo em "2 etapas", inspirado no jogo *The Messenger*. Quando o player se encontra no **ponto mais alto** do pulo, a animação muda. Basicamente temos uma animação pra ele subindo/descendo, e uma para quando ele está no apogeu do salto.
 ## Cena 8
 - Aplicação de animação de salto / pouso de personagem utilizando o **Tween**, que aprendi com Marcos Vinícius, membro do grupo Godot Engine - Brasil, no Facebook.
+## Cena 9
+- Exemplo de como implementar um shader de tela inteira em uma cena.
 
 
 ![Cena 1](https://github.com/Doc-McCoy/godot_mechanics/blob/master/prints/print1.PNG)
