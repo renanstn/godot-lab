@@ -49,6 +49,7 @@ Mecânicas implementadas até agora:
 ![Cena 2](https://github.com/Doc-McCoy/godot_mechanics/blob/master/prints/print2.png)
 ![Cena 3](https://github.com/Doc-McCoy/godot_mechanics/blob/master/prints/print3.png)
 ![Cena 4](https://github.com/Doc-McCoy/godot_mechanics/blob/master/prints/print4.png)
+![Cena 4](https://github.com/Doc-McCoy/godot_mechanics/blob/master/prints/print5.png)
 
 
 *Assets utilizados:
