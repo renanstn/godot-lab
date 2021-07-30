@@ -24,8 +24,12 @@ var gravity
 var max_jump_velocity
 var min_jump_velocity
 
-var motion : Vector2 = Vector2()
-var can_control : bool = true;
+var motion: Vector2 = Vector2()
+var can_control: bool = true
+var looking_to_right: bool = true
+
+signal player_flipped(direction)
+
 
 func _ready():
 	# Aqui que a magia matemática é feita:
@@ -33,12 +37,14 @@ func _ready():
 	max_jump_velocity = -sqrt(2 * gravity * MAX_JUMP_HEIGHT)
 	min_jump_velocity = -sqrt(2 * gravity * MIN_JUMP_HEIGHT)
 
+
 func _physics_process(delta):
 	motion.y += gravity * delta
 	if can_control:
 		control()
 		animate()
 	motion = move_and_slide(motion, Vector2(0, -1))
+
 
 func control():
 	if Input.is_action_pressed("mv_right"):
@@ -52,8 +58,13 @@ func control():
 	if Input.is_action_just_released("jump") and motion.y < min_jump_velocity:
 		motion.y = min_jump_velocity
 
+
 func animate():
-	if motion.x < 0:
+	if motion.x < 0 and looking_to_right:
 		$Sprite.flip_h = true
-	if motion.x > 0:
+		emit_signal("player_flipped", "left")
+		looking_to_right = false
+	if motion.x > 0 and not looking_to_right:
 		$Sprite.flip_h = false
+		emit_signal("player_flipped", "right")
+		looking_to_right = true

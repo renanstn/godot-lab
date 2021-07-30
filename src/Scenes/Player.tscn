@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/platformerPack_character.png" type="Texture" id=2]
-[ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Ball.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
@@ -79,17 +79,6 @@ anims/Idle = SubResource( 2 )
 anims/Jumping = SubResource( 3 )
 anims/Walking = SubResource( 4 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-limit_left = 0
-limit_bottom = 600
-limit_smoothed = true
-smoothing_enabled = true
-smoothing_speed = 2.0
-drag_margin_left = 0.0
-drag_margin_top = 0.7
-drag_margin_right = 0.0
-editor_draw_screen = false
-script = ExtResource( 3 )
+[node name="Camera2D" parent="." instance=ExtResource( 3 )]
 
 [node name="Pivot" parent="." instance=ExtResource( 4 )]
