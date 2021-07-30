@@ -24,7 +24,6 @@ position = Vector2( 155.41, 479.18 )
 [node name="Enemy" type="StaticBody2D" parent="." groups=[
 "enemy",
 ]]
-editor/display_folded = true
 position = Vector2( 735.033, 414.5 )
 __meta__ = {
 "_edit_group_": true
@@ -37,6 +36,5 @@ texture = ExtResource( 4 )
 shape = SubResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="GUI" parent="CanvasLayer" instance=ExtResource( 5 )]
