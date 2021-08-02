@@ -1,5 +1,7 @@
 # Godot Mechanics
 
+[![Godot Engine](https://img.shields.io/badge/GODOT-%23FFFFFF.svg?style=flat&logo=godot-engine)](https://godotengine.org/)
+
 *Este repositório trata-se de um projeto de exemplo onde eu utilizo todas as mecânicas que já desenvolvi na GodotEngine. Para fins de consultas futuras ou auxiliar qualquer pessoinha se aventurando nas águas desta engine maravilhosa.*
 
 Mecânicas implementadas até agora:
