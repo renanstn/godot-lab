@@ -32,4 +32,5 @@ func _process(delta):
 ## Assets:
 
 - [Kenney](https://www.kenney.nl/assets/simplified-platformer-pack)
+- [The Spriters Resource](https://www.spriters-resource.com/)
 - [Sound Bible](http://soundbible.com/)
