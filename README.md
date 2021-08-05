@@ -37,7 +37,7 @@ func _process(delta):
 
 ### 004 - Using Tilesets
 
-- To use a tilemap to create your levels, add a Tilemap Node in your scene, and load the tileset created in last step
+- To use a tilemap to create your levels, add a `Tilemap` Node in your scene, and load the tileset created in last step
 
 ![Load your tileset](Images/LoadTileset.png)
 ![Using a tilemap example](Images/UsingTileset.gif)
