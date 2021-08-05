@@ -18,7 +18,7 @@ Enjoy! 👾
 
 ![Parallax background example](Images/ParallaxBackground.gif)
 
-### 002 - Look at Mouse
+### 002 - Look at Mouse Posotion
 
 - It's simple to make a Node always "look" at the mouse position, just use the `look_at()` function
 
@@ -31,5 +31,5 @@ func _process(delta):
 
 ## Assets:
 
-- [Kenney](https://www.kenney.nl/assets/simplified-platformer-pack)*
+- [Kenney](https://www.kenney.nl/assets/simplified-platformer-pack)
 - [Sound Bible](http://soundbible.com/)
