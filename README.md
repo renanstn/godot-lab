@@ -29,6 +29,19 @@ func _process(delta):
 
 ![Look at mouse example](Images/LookAtMouse.gif)
 
+### 003 - Create Tilesets
+
+- To create a tileset, create your Nodes in a separate scene, and convert the whole scene in menu `Scene -> Convert To -> TileSet`
+
+![Create tilemap example](Images/CreateTileset.gif)
+
+### 004 - Using Tilesets
+
+- To use a tilemap to create your levels, add a `Tilemap` Node in your scene, and load the tileset created in last step
+
+![Load your tileset](Images/LoadTileset.png)
+![Using a tilemap example](Images/UsingTileset.gif)
+
 ## Assets:
 
 - [Kenney](https://www.kenney.nl/assets/simplified-platformer-pack)
