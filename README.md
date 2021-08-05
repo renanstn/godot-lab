@@ -48,6 +48,12 @@ func _process(delta):
 
 ![Basic player example](Images/BasicPlayer.gif)
 
+### 006 - Slow Motion Effect
+
+- In this example, I tried to simulate a slow motion effect, just changing gradativally the `time_scale` value of the engine. You can check the code [here](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Scripts/SlowMotionEffect.gd)
+
+![Slow motion effect example](Images/SlowMotionEffect.gif)
+
 ## Assets:
 
 - [Kenney](https://www.kenney.nl/assets/simplified-platformer-pack)
