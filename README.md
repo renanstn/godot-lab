@@ -42,6 +42,12 @@ func _process(delta):
 ![Load your tileset](Images/LoadTileset.png)
 ![Using a tilemap example](Images/UsingTileset.gif)
 
+### 005 - Basic Player
+
+- This is the most simple and basic 2D platform player you can have. He can walk, he can jump, and have Idle, walking, and jumping animations. You can check the core script [here](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Scripts/SimplePlayer.gd)
+
+![Basic player example](Images/BasicPlayer.gif)
+
 ## Assets:
 
 - [Kenney](https://www.kenney.nl/assets/simplified-platformer-pack)
