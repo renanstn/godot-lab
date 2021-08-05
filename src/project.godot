@@ -14,7 +14,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="basics"
+config/name="Mechanics Lab"
 config/icon="res://icon.png"
 
 [autoload]

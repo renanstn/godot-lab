@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://TileSets/Default.tres" type="TileSet" id=1]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/BasicPlayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/ParallaxBackground.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/SlowMotion.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Rewinder.tscn" type="PackedScene" id=5]

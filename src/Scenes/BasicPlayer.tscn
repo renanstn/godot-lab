@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/BasicPlayer.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/platformerPack_character.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Ball.tscn" type="PackedScene" id=4]
@@ -71,7 +71,6 @@ region_enabled = true
 region_rect = Rect2( 15, 30, 66, 66 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
