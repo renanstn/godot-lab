@@ -18,6 +18,17 @@ Enjoy! 👾
 
 ![Parallax background example](Images/ParallaxBackground.gif)
 
+### 002 - Look at Mouse
+
+- It's simple to make a Node always "look" at the mouse position, just use the `look_at()` function
+
+```gd
+func _process(delta):
+	look_at(get_global_mouse_position())
+```
+
+![Look at mouse example](Images/LookAtMouse.gif)
+
 ## Assets:
 
 - [Kenney](https://www.kenney.nl/assets/simplified-platformer-pack)*
