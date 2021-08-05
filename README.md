@@ -18,7 +18,7 @@ Enjoy! 👾
 
 ![Parallax background example](Images/ParallaxBackground.gif)
 
-### 002 - Look at Mouse Posotion
+### 002 - Look at Mouse Position
 
 - It's simple to make a Node always "look" at the mouse position, just use the `look_at()` function
 
