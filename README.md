@@ -58,7 +58,7 @@ func _process(delta):
 
 ### 007 - Arcade Car 3D
 
-- This example implements a 3D arcade race car mechanic. This mechanic uses a sphere to run all the physics, and visually replace the sphere for the car 3D model
+- This example implements a 3D arcade race car mechanic. This technic uses a sphere to run all the physics, and visually replace the sphere for the car 3D model
 - This technique I've learned from [this](https://kidscancode.org/godot_recipes/3d/3d_sphere_car/) amazing tutorial site
 
 ![Arcade car example](Images/CarSphere.gif)
