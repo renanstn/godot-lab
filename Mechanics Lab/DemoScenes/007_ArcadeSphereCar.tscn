@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/CarSphere.tscn" type="PackedScene" id=1]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0, 0.576471, 0.0235294, 1 )
+
+[sub_resource type="CubeMesh" id=1]
+material = SubResource( 3 )
+size = Vector3( 50, 2, 50 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 30.2385, 1, 26.7357 )
+
+[node name="007_ArcadeSphereCar" type="Spatial"]
+
+[node name="CarSphere" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.00036, 15 )
+
+[node name="Camera3D" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.848584, 0.529061, 0, -0.529061, 0.848584, 0, 11.2085, 29.4079 )
+current = true
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.707107, -0.628183, 0.324632, 0, 0.459099, 0.888385, -0.707107, -0.628183, 0.324632, 13, 15.2564, 18.7587 )
+shadow_enabled = true
