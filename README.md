@@ -35,6 +35,7 @@ func _process(delta):
 
 - To create a tileset, create your Nodes in a separate scene, and convert the whole scene in menu `Scene -> Convert To -> TileSet`
 
+![Scene tree tilemap](Images/SetupTileset.png)
 ![Create tilemap example](Images/CreateTileset.gif)
 
 ### 004 - Using Tilesets
