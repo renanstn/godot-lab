@@ -1,18 +1,6 @@
 extends KinematicBody2D
 
 
-"""
-In this new player script, gravity is not a fixed value chosen by you.
-Instead, you set the UNIT SIZE of the blocks of your tilemap, and all values
-will be calculated according to your blocks.
-This way, it's more easy to control how hight (in blocks) you wan't your
-character reach in a jump, and how long (in blocks too) your character can jump.
-
-This player also had a Tween node to made some cool animations when you're
-jumping and when you're landing. You can configure how much the character will
-"deform" changing the "squash" value.
-"""
-
 const UNIT_SIZE = 64
 # Character will walk 5 blocks per second
 const SPEED = 5 * UNIT_SIZE
