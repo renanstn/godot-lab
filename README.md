@@ -65,10 +65,10 @@ func _process(delta):
 
 ### 008 - Advanced Player
 
-- In this new player script, gravity is not a fixed value chosen by you. Instead, you set the UNIT SIZE of the blocks of your tilemap, and all values will be calculated according to your blocks
-- This way, it's more easy to control how high (in blocks) your character can reach in a jump, and how distance (in blocks) your character can reach
+- In this new character script, gravity is not a fixed value randomly chosen by you. Instead, you set the blocks `UNIT_SIZE` of your tilemap, and all values will be calculated according to your blocks
+- This way, it's more easy to control how high (in blocks) and how distance (in blocks) your character can reach in a jump
 - Holding the "jump" button will make your character jump higher
-- This player also had a Tween node to made some cool animations when you're jumping and when you're landing. You can configure how much the character will "deform" changing the "squash" value.
+- This player also had a `Tween` node to make some cool animations when you're jumping and when you're landing. You can configure how much the character will "deform" changing the "squash" value.
 
 ![Advanced player example](Images/AdvancedPlayer.gif)
 
