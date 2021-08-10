@@ -63,6 +63,14 @@ func _process(delta):
 
 ![Arcade car example](Images/CarSphere.gif)
 
+### 008 - Advanced Player
+
+- In this new player script, gravity is not a fixed value chosen by you. Instead, you set the UNIT SIZE of the blocks of your tilemap, and all values will be calculated according to your blocks.
+- This way, it's more easy to control how hight (in blocks) you wan't your character reach in a jump, and how long (in blocks too) your character can jump.
+- This player also had a Tween node to made some cool animations when you're jumping and when you're landing. You can configure how much the character will "deform" changing the "squash" value.
+
+![Advanced player example](Images/)
+
 ## Assets:
 
 - [Kenney](https://www.kenney.nl/assets/simplified-platformer-pack)
