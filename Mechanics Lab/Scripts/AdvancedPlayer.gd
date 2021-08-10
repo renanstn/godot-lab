@@ -7,6 +7,10 @@ Instead, you set the UNIT SIZE of the blocks of your tilemap, and all values
 will be calculated according to your blocks.
 This way, it's more easy to control how hight (in blocks) you wan't your
 character reach in a jump, and how long (in blocks too) your character can jump.
+
+This player also had a Tween node to made some cool animations when you're
+jumping and when you're landing. You can configure how much the character will
+"deform" changing the "squash" value.
 """
 
 const UNIT_SIZE = 64
@@ -19,8 +23,11 @@ const MIN_JUMP_HEIGHT = 0.8 * UNIT_SIZE
 # Each jump will take 0.5 seconds
 const JUMP_DURATION = 0.5
 
-onready var sprite : Sprite = $Sprite
-onready var animator : AnimationPlayer = $AnimationPlayer
+onready var sprite: Sprite = $Sprite
+onready var animator: AnimationPlayer = $AnimationPlayer
+onready var tween: Tween = $Tween
+
+export var squash: float
 
 var gravity: float
 var max_jump_velocity: float
@@ -28,6 +35,7 @@ var min_jump_velocity: float
 var motion: Vector2 = Vector2()
 var can_control: bool = true
 var looking_to_right: bool = true
+var was_grounded: bool
 
 signal player_flipped(direction)
 
@@ -43,24 +51,31 @@ func _physics_process(delta):
 	motion.y += gravity * delta
 	if can_control:
 		control()
-		animate()
+	animate()
 	motion = move_and_slide(motion, Vector2(0, -1))
 
 
-func control():
+func control() -> void:
 	if Input.is_action_pressed("right"):
 		motion.x = SPEED
 	elif Input.is_action_pressed("left"):
 		motion.x = -SPEED
 	else:
 		motion.x = 0
+
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
+		was_grounded = false
 		motion.y = max_jump_velocity
+		squash_jump()
+	elif is_on_floor() and !was_grounded:
+		squash_landed()
+		was_grounded = true
+
 	if Input.is_action_just_released("jump") and motion.y < min_jump_velocity:
 		motion.y = min_jump_velocity
 
 
-func animate():
+func animate() -> void:
 	if motion.x != 0:
 		animator.play("Walking")
 	else:
@@ -75,3 +90,29 @@ func animate():
 		sprite.flip_h = false
 		emit_signal("player_flipped", "right")
 		looking_to_right = true
+
+
+func squash_landed() -> void:
+	tween.interpolate_property(
+		sprite,
+		"scale",
+		Vector2(1+squash, 1-squash),
+		Vector2(1, 1),
+		0.5,
+		Tween.TRANS_BACK,
+		Tween.EASE_OUT
+	)
+	tween.start()
+
+
+func squash_jump() -> void:
+	tween.interpolate_property(
+		sprite,
+		"scale",
+		Vector2(1-squash,1+squash),
+		Vector2(1,1),
+		0.5,
+		Tween.TRANS_BACK,
+		Tween.EASE_OUT
+	)
+	tween.start()

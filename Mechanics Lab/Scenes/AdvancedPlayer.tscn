@@ -58,9 +58,12 @@ tracks/0/keys = {
 
 [node name="AdvancedPlayer" type="KinematicBody2D"]
 script = ExtResource( 1 )
+squash = 0.2
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.0998383, 32.7834 )
 texture = ExtResource( 2 )
+offset = Vector2( 0, -32 )
 region_enabled = true
 region_rect = Rect2( 15, 30, 66, 66 )
 
@@ -71,3 +74,5 @@ shape = SubResource( 1 )
 anims/Idle = SubResource( 2 )
 anims/Jumping = SubResource( 3 )
 anims/Walking = SubResource( 4 )
+
+[node name="Tween" type="Tween" parent="."]
