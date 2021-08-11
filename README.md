@@ -18,7 +18,7 @@ Enjoy! 👾
 
 ## 001 - Parallax Background
 
-- No scripts required, you can made parallax effects in Godot only using the `ParallaxBackground` and `ParallaxLayer` nodes
+- No scripts required, you can make parallax effects in Godot only using the `ParallaxBackground` and `ParallaxLayer` nodes
 
 ![Parallax background example](Images/ParallaxBackground.gif)
 
@@ -69,7 +69,7 @@ func _process(delta):
 ## 008 - Advanced Player
 
 - In this new character script, gravity is not a fixed value randomly chosen by you. Instead, you set the blocks `UNIT_SIZE` of your tilemap, and all values will be calculated according to your blocks
-- This way, it's more easy to control how high (in blocks) and how distance (in blocks) your character can reach in a jump
+- This way, it's easier to control how high (in blocks) and how much distance (in blocks) your character can reach in a jump
 - Holding the "jump" button will make your character jump higher
 - This player also had a `Tween` node to make some cool animations when you're jumping and when you're landing. You can configure how much the character will "deform" changing the "squash" value.
 - And [here's the code](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Scripts/AdvancedPlayer.gd)
