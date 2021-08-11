@@ -8,7 +8,9 @@ v3.3.2
 
 This project contains a series of experiments, scripts and studies I've made in Godot through all this years.
 
-Every [DemoScene](https://github.com/renanstn/godot-mechanics/tree/master/Mechanics%20Lab/DemoScenes) implements one feature or mechanic I've made. You can use it as an example or as a base for your studies in this amazing engine.
+Every [DemoScene](https://github.com/renanstn/godot-mechanics/tree/master/Mechanics%20Lab/DemoScenes) implements one mechanic I've created, or a mechanic existing in another game that I tried to replicate.
+
+I hope you can use my scripts as an example or as a base for your studies in this amazing engine 😃
 
 Enjoy! 👾
 
