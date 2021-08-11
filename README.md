@@ -4,7 +4,7 @@
 
 v3.3.2
 
-## Description
+# Description
 
 This project contains a series of experiments, scripts and studies I've made in Godot through all this years.
 
@@ -12,15 +12,15 @@ Every demo scene implements an unique and isolated mechanic you can use as examp
 
 Enjoy! 👾
 
-## Demo scenes
+# Demo scenes
 
-### 001 - Parallax Background
+## 001 - Parallax Background
 
 - No scripts required, you can made parallax effects in Godot only using the `ParallaxBackground` and `ParallaxLayer` nodes
 
 ![Parallax background example](Images/ParallaxBackground.gif)
 
-### 002 - Look at Mouse Position
+## 002 - Look at Mouse Position
 
 - It's simple to make a Node always "look" at the mouse position, just use the `look_at()` function
 
@@ -31,40 +31,40 @@ func _process(delta):
 
 ![Look at mouse example](Images/LookAtMouse.gif)
 
-### 003 - Create Tilesets
+## 003 - Create Tilesets
 
 - To create a tileset, create your Nodes in a separate scene, and convert the whole scene in menu `Scene -> Convert To -> TileSet`
 
 ![Scene tree tilemap](Images/SetupTileset.png)
 ![Create tilemap example](Images/CreateTileset.gif)
 
-### 004 - Using Tilesets
+## 004 - Using Tilesets
 
 - To use a tilemap to create your levels, add a `Tilemap` Node in your scene, and load the tileset created in last step
 
 ![Load your tileset](Images/LoadTileset.png)
 ![Using a tilemap example](Images/UsingTileset.gif)
 
-### 005 - Basic Player
+## 005 - Basic Player
 
 - This is the most simple and basic 2D platform player you can have. He can walk, he can jump, and have Idle, walking, and jumping animations. You can check the code [here](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Scripts/SimplePlayer.gd)
 
 ![Basic player example](Images/BasicPlayer.gif)
 
-### 006 - Slow Motion Effect
+## 006 - Slow Motion Effect
 
 - In this example, I tried to simulate a slow motion effect, just changing gradativally the `time_scale` value of the engine. You can check the code [here](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Scripts/SlowMotionEffect.gd)
 
 ![Slow motion effect example](Images/SlowMotionEffect.gif)
 
-### 007 - Arcade Car 3D
+## 007 - Arcade Car 3D
 
 - This example implements a 3D arcade race car mechanic. This technique uses a sphere to run all the physics, and visually replace the sphere for the car 3D model
 - This technique I've learned from [this](https://kidscancode.org/godot_recipes/3d/3d_sphere_car/) amazing tutorial
 
 ![Arcade car example](Images/CarSphere.gif)
 
-### 008 - Advanced Player
+## 008 - Advanced Player
 
 - In this new character script, gravity is not a fixed value randomly chosen by you. Instead, you set the blocks `UNIT_SIZE` of your tilemap, and all values will be calculated according to your blocks
 - This way, it's more easy to control how high (in blocks) and how distance (in blocks) your character can reach in a jump
@@ -73,7 +73,7 @@ func _process(delta):
 
 ![Advanced player example](Images/AdvancedPlayer.gif)
 
-### 009 - Boomerang
+## 009 - Boomerang
 
 - A simple and smooth boomerang
 - Go towards mouse click coordinates
@@ -101,7 +101,7 @@ var distance_to_target = position.distance_to(target)
 
 ![Boomerang example](Images/Boomerang.gif)
 
-## Assets:
+# Assets:
 
 - [Kenney](https://www.kenney.nl/assets/simplified-platformer-pack)
 - [The Spriters Resource](https://www.spriters-resource.com/)
