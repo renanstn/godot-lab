@@ -79,6 +79,26 @@ func _process(delta):
 - Go towards mouse click coordinates
 - Always return to the player
 
+**Tips and tricks**
+
+- To get the direction (`Vector2`) between 2 positions (`Vector2`)
+
+```gd
+var direction = (target - start_position).normalized()
+```
+
+- To move your object towards this direction
+
+```gd
+position += direction.rotated(rotation) * speed * delta
+```
+
+- To calc the distance between 2 positions
+
+```gd
+var distance_to_target = position.distance_to(target)
+```
+
 ![Boomerang example](Images/Boomerang.gif)
 
 ## Assets:
