@@ -103,6 +103,27 @@ var distance_to_target = position.distance_to(target)
 
 ![Boomerang example](Images/Boomerang.gif)
 
+## 010 - The Messenger Jump
+
+- In this demo, I tried to reproduce the "3 steps jump animation" used in [The Messenger](https://themessengergame.com/)
+- This jump uses 3 animations, one when the character is upping, one when he's on top, and another when he's falling.
+- I made this script to obtain this result
+
+```gd
+
+func animate():
+    if !is_on_floor():
+        if abs(motion.y) > JUMP / 2:
+            if motion.y < 0:
+                animator.play("Jump_up")
+            else:
+                animator.play("Jump_down")
+        else:
+            animator.play("Jump_roll")
+```
+
+![The Messenger jump example](Images/TheMessenger.gif)
+
 # Assets:
 
 - [Kenney](https://www.kenney.nl/assets/simplified-platformer-pack)
