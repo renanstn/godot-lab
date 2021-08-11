@@ -70,6 +70,7 @@ func _process(delta):
 - This way, it's more easy to control how high (in blocks) and how distance (in blocks) your character can reach in a jump
 - Holding the "jump" button will make your character jump higher
 - This player also had a `Tween` node to make some cool animations when you're jumping and when you're landing. You can configure how much the character will "deform" changing the "squash" value.
+- And [here's the code](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Scripts/AdvancedPlayer.gd)
 
 ![Advanced player example](Images/AdvancedPlayer.gif)
 
@@ -78,6 +79,7 @@ func _process(delta):
 - A simple and smooth boomerang
 - Go towards mouse click coordinates
 - Always return to the player
+- [Code here](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Scripts/Boomerang.gd)
 
 **Tips and tricks**
 
