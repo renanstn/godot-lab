@@ -73,6 +73,14 @@ func _process(delta):
 
 ![Advanced player example](Images/AdvancedPlayer.gif)
 
+### 009 - Boomerang
+
+- A simple and smooth boomerang
+- Go towards mouse click coordinates
+- Always return to the player
+
+![Boomerang example](Images/Boomerang.gif)
+
 ## Assets:
 
 - [Kenney](https://www.kenney.nl/assets/simplified-platformer-pack)
