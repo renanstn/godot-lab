@@ -9,7 +9,6 @@ radius = 10.6345
 [node name="Boomerang" type="Area2D"]
 script = ExtResource( 1 )
 max_speed = 500
-boomerang_range = 400
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 10, 0 )
