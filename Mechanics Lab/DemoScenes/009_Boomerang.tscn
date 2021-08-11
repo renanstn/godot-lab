@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Tilesets/TilesetDemo.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/AdvancedPlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/BoomerangLauncher.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Boomerang.tscn" type="PackedScene" id=4]
 
-[node name="008_AdvancedPlayer" type="Node2D"]
+[node name="009_Boomerang" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -70,7 +72,10 @@ margin_left = 7.0
 margin_top = 8.0
 margin_right = 78.0
 margin_bottom = 22.0
-text = "Hold Space"
+text = "Mouse Left"
 
 [node name="AdvancedPlayer" parent="." instance=ExtResource( 2 )]
-position = Vector2( 192, 384 )
+position = Vector2( 256, 384 )
+
+[node name="BoomerangLauncher" parent="AdvancedPlayer" instance=ExtResource( 3 )]
+boomerang_scene = ExtResource( 4 )
