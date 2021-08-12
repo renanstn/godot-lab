@@ -133,6 +133,20 @@ func animate():
 
 ![Rolling ball example](Images/RollingBall.gif)
 
+## 012 - Full screen Shader
+
+- This is a simple example of a shader covering the whole screen
+- How I make:
+  - Add a `TextureRect` node
+  - Add a simple [white image](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Sprites/white.png) as a texture to your `TextureRect` node
+  - Check the `expand` option
+  - Adjust the `rect` size to fill your whole window (you can check your window size in `Project → Project settings → Window`)
+  - In `Material` section, add a `ShaderMaterial`
+  - Load your shader
+- For this example, I used [this](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Shaders/ScreenGlitch.shader) screen glitch shader
+
+![Full screen shader example](Images/FullScreenShader.gif)
+
 # Assets:
 
 - [Kenney](https://www.kenney.nl/assets/simplified-platformer-pack)
