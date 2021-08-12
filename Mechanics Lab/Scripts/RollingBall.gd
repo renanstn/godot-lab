@@ -14,7 +14,6 @@ var on_ground: bool = false
 
 
 func _physics_process(_delta):
-	raycast.set_position(Vector2(position.x, position.y))
 	if accelerate_right:
 		rotate += 10
 		rotate = clamp(rotate, -1000, 1000)
@@ -36,6 +35,7 @@ func _physics_process(_delta):
 
 
 func _process(_delta):
+	raycast.set_position(Vector2(position.x, position.y))
 	# Check inputs
 	if Input.is_action_pressed("right"):
 		accelerate_right = true
