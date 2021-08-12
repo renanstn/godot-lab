@@ -2,7 +2,7 @@
 
 [![Godot Engine](https://img.shields.io/badge/GODOT-%23FFFFFF.svg?style=flat&logo=godot-engine)](https://godotengine.org/)
 
-v3.3.2
+All examples in this repo runs in Godot **v3.3.2**
 
 # Description
 
