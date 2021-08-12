@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/ParallaxBackground.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sprites/UI/flatDark23.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/UI/flatDark24.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/white.png" type="Texture" id=5]
+[ext_resource path="res://Shaders/ScreenGlitch.shader" type="Shader" id=6]
 
-[node name="001_ParallaxBackground" type="Node2D"]
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 6 )
+
+[node name="012_FullScreenShader" type="Node2D"]
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 2 )]
 
@@ -39,3 +44,15 @@ margin_left = 84.0
 margin_right = 164.0
 margin_bottom = 80.0
 texture = ExtResource( 4 )
+
+[node name="ShaderLayer" type="CanvasLayer" parent="."]
+
+[node name="Shader" type="TextureRect" parent="ShaderLayer"]
+material = SubResource( 1 )
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
