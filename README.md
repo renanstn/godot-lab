@@ -128,7 +128,7 @@ func animate():
 
 ## 011 - Rolling Ball
 
-- With [this simple script]() you can control a rolling ball through a 2D scenario
+- With [this simple script](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Scripts/RollingBall.gd) you can control a rolling ball through a 2D scenario
 - You can roll to the left, right, and you can jump
 
 ![Rolling ball example](Images/RollingBall.gif)
