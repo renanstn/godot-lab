@@ -147,6 +147,17 @@ func animate():
 
 ![Full screen shader example](Images/FullScreenShader.gif)
 
+## 013 - Olija Spear
+
+- In this example, I tried to reproduce the [Olija](https://olija.com/) spear effect
+- You can throw your spear in any direction using the `Mouse Left`
+- The spear sticks to any physic body it hits
+- If you press `R`, you pick you spear back
+- If you press `Mouse Right`, your character teleports to spear position
+- You can check how I made this effect [here](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Scripts/SpearLauncher.gd)
+
+![Olija spear example](Images/OlijaSpear.gif)
+
 # Assets:
 
 - [Kenney](https://www.kenney.nl/assets/simplified-platformer-pack)
