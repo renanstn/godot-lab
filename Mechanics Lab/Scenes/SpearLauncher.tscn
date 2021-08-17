@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/SpearLauncher.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Spear.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/spear.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/TeletransportEffect.tscn" type="PackedScene" id=4]
+
+[node name="SpearLauncher" type="Position2D"]
+script = ExtResource( 1 )
+spear_scene = ExtResource( 2 )
+teleport_effect = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 3 )
