@@ -23,14 +23,11 @@ func _process(_delta):
 		elif Input.is_action_just_released("mouse_left"):
 			sprite.visible = false
 			throw_spear()
-			can_throw = false
 	else:
 		if Input.is_action_just_pressed("mouse_right"):
 			teletransport()
-			can_throw = true
 	if Input.is_action_just_pressed("reload"):
-		emit_signal("reload")
-		can_throw = true
+		reload_spear()
 
 
 func throw_spear() -> void:
@@ -42,6 +39,7 @@ func throw_spear() -> void:
 	spear.direction = direction
 	connect("reload", spear, "_on_reload")
 	get_parent().get_parent().add_child(spear)
+	can_throw = false
 
 
 func teletransport() -> void:
@@ -53,3 +51,12 @@ func teletransport() -> void:
 	player.position = spear.position
 	emit_signal("reload")
 	player.can_control = true
+	can_throw = true
+
+
+func reload_spear() -> void:
+	emit_signal("reload")
+	var effect = teleport_effect.instance()
+	effect.global_position = spear.global_position
+	get_parent().get_parent().add_child(effect)
+	can_throw = true
