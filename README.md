@@ -144,6 +144,7 @@ func animate():
   - In `Material` section, add a `ShaderMaterial`
   - Load your shader
 - For this example, I used [this](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Shaders/ScreenGlitch.shader) screen glitch shader
+- You can find some amazing shaders ready to use in your game in [Godot Shaders](https://godotshaders.com/) website, or in [Shadertoy](https://www.shadertoy.com/)  (but shaders from Shadertoy need to be [converted](https://docs.godotengine.org/en/stable/tutorials/shading/migrating_to_godot_shader_language.html?highlight=shadertoy#shadertoy))
 
 ![Full screen shader example](Images/FullScreenShader.gif)
 
