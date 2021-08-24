@@ -1,0 +1,92 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Tilesets/TilesetDemo.tres" type="TileSet" id=1]
+[ext_resource path="res://Scenes/RaycastWeapon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/BulletsGUI.gd" type="Script" id=3]
+
+[node name="014_RaycastWeapon" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+collision_layer = 3
+collision_mask = 3
+format = 1
+tile_data = PoolIntArray( 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 6, 2, 0, 7, 2, 0, 8, 2, 0, 9, 2, 0, 10, 2, 0, 11, 2, 0, 12, 2, 0, 13, 2, 0, 14, 2, 0, 15, 2, 0, 65536, 2, 0, 65551, 2, 0, 131072, 2, 0, 131087, 2, 0, 196608, 2, 0, 196623, 2, 0, 262144, 2, 0, 262159, 2, 0, 327680, 2, 0, 327695, 2, 0, 393216, 2, 0, 393231, 2, 0, 458752, 2, 0, 458767, 2, 0, 524288, 2, 0, 524289, 2, 0, 524290, 2, 0, 524291, 2, 0, 524292, 2, 0, 524293, 2, 0, 524294, 2, 0, 524295, 2, 0, 524296, 2, 0, 524297, 2, 0, 524298, 2, 0, 524299, 2, 0, 524300, 2, 0, 524301, 2, 0, 524302, 2, 0, 524303, 2, 0 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 200.0
+margin_bottom = 60.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
+margin_right = 170.0
+margin_bottom = 60.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+margin_right = 170.0
+margin_bottom = 28.0
+
+[node name="PanelContainer7" type="PanelContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 22.0
+margin_bottom = 28.0
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer7"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 15.0
+margin_bottom = 21.0
+text = "R"
+
+[node name="PanelContainer6" type="PanelContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 26.0
+margin_right = 111.0
+margin_bottom = 28.0
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer6"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 78.0
+margin_bottom = 21.0
+text = "Mouse Left"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+margin_top = 32.0
+margin_right = 170.0
+margin_bottom = 60.0
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_right = 63.0
+margin_bottom = 28.0
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 56.0
+margin_bottom = 21.0
+text = "Bullets:"
+
+[node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 67.0
+margin_right = 89.0
+margin_bottom = 28.0
+
+[node name="BulletsGUI" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2/PanelContainer2"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 15.0
+margin_bottom = 21.0
+text = "0"
+script = ExtResource( 3 )
+
+[node name="RaycastWeapon" parent="." instance=ExtResource( 2 )]
+position = Vector2( 512, 256 )
+spread_rate = 0.1
+recoil_time = 0.1
+
+[connection signal="update_bullets" from="RaycastWeapon" to="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2/PanelContainer2/BulletsGUI" method="_on_RaycastWeapon_update_bullets"]

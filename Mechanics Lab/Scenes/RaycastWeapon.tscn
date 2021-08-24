@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Sprites/pistol.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/RaycastWeapon.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Cartridge.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/RaycastWeaponBulletTrail.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/HitEffect.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Sounds/Click-SoundBible.com-1387633738.wav" type="AudioStream" id=6]
+[ext_resource path="res://Sounds/Stapler-SoundBible.com-374581609.wav" type="AudioStream" id=7]
+[ext_resource path="res://Sounds/9_mm_gunshot-mike-koenig-123.wav" type="AudioStream" id=8]
+
+[node name="RaycastWeapon" type="Node2D"]
+script = ExtResource( 2 )
+hit_animation_scene = ExtResource( 5 )
+bullet_trail_scene = ExtResource( 4 )
+capsule_scene = ExtResource( 3 )
+gun_type = 1
+bullet_damage = 10
+spread_rate = 0.5
+recoil_time = 1.0
+max_bullets = 12
+reload_time = 1.5
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="ShootPoint" type="Position2D" parent="."]
+position = Vector2( 56, -40 )
+
+[node name="EjectCapsulePoint" type="Position2D" parent="."]
+position = Vector2( 8, -40 )
+
+[node name="ShootSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+
+[node name="ReloadSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+
+[node name="EmptyBulletsSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+
+[node name="RecoilTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="ReloadTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[connection signal="timeout" from="RecoilTimer" to="." method="_on_RecoilTimer_timeout"]
+[connection signal="timeout" from="ReloadTimer" to="." method="_on_ReloadTimer_timeout"]
