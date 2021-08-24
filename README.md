@@ -166,6 +166,7 @@ func animate():
 - Automatic and semi automatic modes
 - Emit signs when it shoot, reload, hit, etc
 - Shoot, reload, and empty bullets sounds
+- Adjustable `damage`, `spread rate`, `recoil time`, `bullets` and `reload time`
 - Script [here](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Scripts/RaycastWeapon.gd)
 
 ![Raycast weapon example](Images/RaycastWeapon.gif)
