@@ -159,6 +159,17 @@ func animate():
 
 ![Olija spear example](Images/OlijaSpear.gif)
 
+## 014 - Raycast Weapon
+
+- A 2D raycast weapon, with some nice bullet trail, animation hit, and cartridge ejection effects
+- Shoots in mouse direction
+- Automatic and semi automatic modes
+- Emit signs when it shoot, reload, hit, etc
+- Shoot, reload, and empty bullets sounds
+- Script [here](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Scripts/RaycastWeapon.gd)
+
+![Raycast weapon example](Images/RaycastWeapon.gif)
+
 # Assets:
 
 - [Kenney](https://www.kenney.nl/assets/simplified-platformer-pack)
