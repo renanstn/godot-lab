@@ -29,7 +29,7 @@ signal player_flipped(direction)
 
 
 func _ready():
-	# Here's al the magic calcs
+	# Here's all the magic calcs
 	gravity = 2 * MAX_JUMP_HEIGHT / pow(JUMP_DURATION, 2)
 	max_jump_velocity = -sqrt(2 * gravity * MAX_JUMP_HEIGHT)
 	min_jump_velocity = -sqrt(2 * gravity * MIN_JUMP_HEIGHT)
