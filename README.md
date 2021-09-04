@@ -21,6 +21,7 @@ Enjoy! 👾
 - No scripts required, you can make parallax effects in Godot only using the `ParallaxBackground` and `ParallaxLayer` nodes
 
 ![Parallax background example](Images/ParallaxBackground.gif)
+![Parallax node example](Images/Parallax.png)
 
 ## 002 - Look at Mouse Position
 
