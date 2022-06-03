@@ -8,6 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm install -g markdownlint-cli
+      - run: npm install -g markdownlint-cli --disable MD025 MD036
       - run: markdownlint '**/*.md'
-      
