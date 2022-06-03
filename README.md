@@ -153,7 +153,8 @@ func animate():
 ## 011 - Rolling Ball
 
 - With
-[this simple script](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Scripts/RollingBall.gd) you can control a rolling ball through a 2D scenario
+[this simple script](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Scripts/RollingBall.gd)
+you can control a rolling ball through a 2D scenario
 - You can roll to the left, right, and you can jump
 
 ![Rolling ball example](Images/RollingBall.gif)
@@ -171,7 +172,8 @@ func animate():
   size in `Project → Project settings → Window`)
   - In `Material` section, add a `ShaderMaterial`
   - Load your shader
-- For this example, I used [this](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Shaders/ScreenGlitch.shader) screen glitch shader
+- For this example, I used [this](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Shaders/ScreenGlitch.shader)
+screen glitch shader
 - You can find some amazing shaders ready to use in your game in [Godot Shaders](https://godotshaders.com/)
 website, or in [Shadertoy](https://www.shadertoy.com/)  (but shaders from
 Shadertoy need to be [converted](https://docs.godotengine.org/en/stable/tutorials/shading/migrating_to_godot_shader_language.html?highlight=shadertoy#shadertoy))
