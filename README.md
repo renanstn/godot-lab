@@ -36,7 +36,7 @@ Enjoy! 👾
 
 ```gd
 func _process(delta):
-	look_at(get_global_mouse_position())
+    look_at(get_global_mouse_position())
 ```
 
 ![Look at mouse example](Images/LookAtMouse.gif)
@@ -152,7 +152,8 @@ func animate():
 
 ## 011 - Rolling Ball
 
-- With [this simple script](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Scripts/RollingBall.gd) you can control a rolling ball through a 2D scenario
+- With
+[this simple script](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Scripts/RollingBall.gd) you can control a rolling ball through a 2D scenario
 - You can roll to the left, right, and you can jump
 
 ![Rolling ball example](Images/RollingBall.gif)
@@ -162,7 +163,9 @@ func animate():
 - This is a simple example of a shader covering the whole screen
 - How I make:
   - Add a `TextureRect` node
-  - Add a simple [white image](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Sprites/white.png) as a texture to your `TextureRect` node
+  - Add a simple
+  [white image](https://github.com/renanstn/godot-mechanics/blob/master/Mechanics%20Lab/Sprites/white.png)
+  as a texture to your `TextureRect` node
   - Check the `expand` option
   - Adjust the `rect` size to fill your whole window (you can check your window
   size in `Project → Project settings → Window`)
@@ -200,7 +203,7 @@ cartridge ejection effects
 
 ![Raycast weapon example](Images/RaycastWeapon.gif)
 
-# Assets:
+# Assets
 
 - [Kenney](https://www.kenney.nl/assets/simplified-platformer-pack)
 - [The Spriters Resource](https://www.spriters-resource.com/)
