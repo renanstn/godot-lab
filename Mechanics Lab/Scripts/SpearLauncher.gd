@@ -26,8 +26,8 @@ func _process(_delta):
 	else:
 		if Input.is_action_just_pressed("mouse_right"):
 			teletransport()
-	if Input.is_action_just_pressed("reload"):
-		reload_spear()
+		if Input.is_action_just_pressed("reload"):
+			reload_spear()
 
 
 func throw_spear() -> void:
