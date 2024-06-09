@@ -20,9 +20,6 @@ margin_left = 30.0
 margin_top = 30.0
 margin_right = 200.0
 margin_bottom = 60.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
 margin_right = 170.0

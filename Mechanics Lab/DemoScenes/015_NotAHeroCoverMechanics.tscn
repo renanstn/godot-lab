@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Tilesets/TilesetDemo.tres" type="TileSet" id=1]
+[ext_resource path="res://Scenes/NotAHeroCharacter.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Cover.tscn" type="PackedScene" id=3]
+
+[node name="015_NotAHeroCoverMechanics" type="Node2D"]
+
+[node name="Cover" parent="." instance=ExtResource( 3 )]
+position = Vector2( 480, 480 )
+
+[node name="NotAHeroCharacter" parent="." instance=ExtResource( 2 )]
+position = Vector2( 96, 480 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer"]
+margin_right = 131.0
+margin_bottom = 28.0
+
+[node name="PanelContainer" type="PanelContainer" parent="UI/MarginContainer/HBoxContainer"]
+margin_right = 23.0
+margin_bottom = 28.0
+
+[node name="Label" type="Label" parent="UI/MarginContainer/HBoxContainer/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 16.0
+margin_bottom = 21.0
+text = "A"
+
+[node name="PanelContainer2" type="PanelContainer" parent="UI/MarginContainer/HBoxContainer"]
+margin_left = 27.0
+margin_right = 51.0
+margin_bottom = 28.0
+
+[node name="Label" type="Label" parent="UI/MarginContainer/HBoxContainer/PanelContainer2"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 17.0
+margin_bottom = 21.0
+text = "D"
+
+[node name="PanelContainer3" type="PanelContainer" parent="UI/MarginContainer/HBoxContainer"]
+margin_left = 55.0
+margin_right = 106.0
+margin_bottom = 28.0
+
+[node name="Label" type="Label" parent="UI/MarginContainer/HBoxContainer/PanelContainer3"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 44.0
+margin_bottom = 21.0
+text = "Space"
+
+[node name="PanelContainer4" type="PanelContainer" parent="UI/MarginContainer/HBoxContainer"]
+margin_left = 110.0
+margin_right = 131.0
+margin_bottom = 28.0
+
+[node name="Label" type="Label" parent="UI/MarginContainer/HBoxContainer/PanelContainer4"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 14.0
+margin_bottom = 21.0
+text = "E"

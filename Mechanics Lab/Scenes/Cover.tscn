@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/Tiles/platformPack_tilesheet.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Cover.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 64, 32 )
+
+[node name="Cover" type="StaticBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 64, 64, 64 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="CoverArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CoverArea"]
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="CoverArea" to="." method="_on_CoverArea_body_entered"]
+[connection signal="body_exited" from="CoverArea" to="." method="_on_CoverArea_body_exited"]
